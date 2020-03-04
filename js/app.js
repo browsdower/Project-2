@@ -110,7 +110,7 @@ d3.csv("data/reg_pbp_2019.csv").then(function(chiefsData, err) {
         data.column_name = +data.column_name;
     });
   // yLinearScale function above csv import
-  var yLinearScale = xScale(chiefsData, chosenYAxis);
+  var yLinearScale = yScale(chiefsData, chosenYAxis);
   // Create x scale function, this will be for the week played. 1-17, skipping week 12 bc bye week
   var xLinearScale = d3.scaleLinear()
     .domain([0, d3.max(chiefsData, d => d.week)])
@@ -128,7 +128,7 @@ d3.csv("data/reg_pbp_2019.csv").then(function(chiefsData, err) {
     .call(bottomAxis);
   // append initial circles
   var circlesGroup = chartGroup.selectAll("circle")
-    .data(hairData)
+    .data(chiefsData)
     .enter()
     .append("circle")
     .attr("cy", d => yLinearScale(d[chosenYAxis]))
