@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chiefs Yards vs Win/Loss + Points Scored</title>
+    <title>Chiefs Passing/Receiving vs Rushing Yards</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
@@ -12,7 +12,13 @@
     <!-- Div for Plotly Plot -->
     <div id="plot"></div>
 
+    <!-- Selector for switching Barmodes -->
+    <select id="selOption">
+        <option value="stack">Stacked</option>
+        <option value="group">Grouped</option>
+    </select>
+
     <!-- Sourcing Plots JS file -->
-    <script src="plots2.js"></script>
+    <script src="plots.js"></script>
 </body>
 </html>
