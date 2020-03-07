@@ -17,8 +17,8 @@ d3.csv("yards.csv").then(function(data) {
     // traces for Player Data
   var trace3 = {
     x: data.map(row => row.Week),
-    y: data.map(row => row.Kelce),
-    name: "Kelce",
+    y: data.map(row => row.Run),
+    name: "Rush Yards",
     type: "scatter",
     marker: {
       color: 'black',
@@ -27,64 +27,18 @@ d3.csv("yards.csv").then(function(data) {
     }
   };
 
-  var trace4 = {
-    x: data.map(row => row.Week),
-    y: data.map(row => row.Hill),
-    name: "Hill",
-    type: "scatter",
-    marker: {
-      color: 'purple',
-      size: 12,
-      opacity: 0.7
-    }
-  };
-
-  var trace5 = {
-    x: data.map(row => row.Week),
-    y: data.map(row => row.Damien),
-    name: "Damien",
-    type: "scatter",
-    marker: {
-      color: 'green',
-      size: 12,
-      opacity: 0.7
-    }
-  };
-
-  var trace6 = {
-    x: data.map(row => row.Week),
-    y: data.map(row => row.McCoy),
-    name: "McCoy",
-    type: "scatter",
-    marker: {
-      color: 'light-blue',
-      size: 12,
-      opacity: 0.7
-    }
-  };
-
-  var trace7 = {
-    x: data.map(row => row.Week),
-    y: data.map(row => row.Darrel),
-    name: "Darrel",
-    type: "scatter",
-    marker: {
-      color: 'grey',
-      size: 12,
-      opacity: 0.7
-    }
-  };
-
     
     // Create data object
-    var data = [trace1, trace3, trace4, trace5, trace6, trace7];
+    var data = [trace1, trace3];
     
     // Create layout object
     var layout = {
       title: "Chiefs Yards Per Week by Win/Loss",
+      xaxis: { title: "Week Played (Red = Loss)" },
+      yaxis: { title: "Total Yards Gained" }
     };
     
     // Render the plot to the div tag with id "plot"
-    Plotly.newPlot("plot", data, layout);
+    Plotly.newPlot("plot3", data, layout);
     
     });

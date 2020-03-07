@@ -117,7 +117,7 @@ var layout = {
 }
 
 // render plot with id "plot"
-Plotly.newPlot("plot", data, layout);
+Plotly.newPlot("plot4", data, layout);
 
   })
 }

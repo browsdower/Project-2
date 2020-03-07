@@ -23,7 +23,7 @@ function init(){
   var trace1 = {
     x: data.map(row => row.Week),
     y: data.map(row => row.Run),
-    name: "Rush",
+    name: "Rush Yards",
     type: "bar",
     marker: {
       color: 'red'
@@ -34,7 +34,7 @@ function init(){
   var trace2 = {
     x: data.map(row => row.Week),
     y: data.map(row => row.Pass),
-    name: "Pass",
+    name: "Pass Yards",
     type: "bar",
     marker: {
       color: 'gold'
@@ -45,7 +45,7 @@ function init(){
   var trace3 = {
     x: data.map(row => row.Week),
     y: data.map(row => row.Kelce),
-    name: "Kelce",
+    name: "Travis Kelce",
     type: "scatter",
     marker: {
       color: 'black',
@@ -57,7 +57,7 @@ function init(){
   var trace4 = {
     x: data.map(row => row.Week),
     y: data.map(row => row.Hill),
-    name: "Hill",
+    name: "Tyreek Hill",
     type: "scatter",
     marker: {
       color: 'purple',
@@ -69,7 +69,7 @@ function init(){
   var trace5 = {
     x: data.map(row => row.Week),
     y: data.map(row => row.Damien),
-    name: "Damien",
+    name: "Damien Williams",
     type: "scatter",
     marker: {
       color: 'green',
@@ -81,10 +81,10 @@ function init(){
   var trace6 = {
     x: data.map(row => row.Week),
     y: data.map(row => row.McCoy),
-    name: "McCoy",
+    name: "LeSean McCoy",
     type: "scatter",
     marker: {
-      color: 'light-blue',
+      color: 'orange',
       size: 12,
       opacity: 0.7
     }
@@ -93,10 +93,10 @@ function init(){
   var trace7 = {
     x: data.map(row => row.Week),
     y: data.map(row => row.Darrel),
-    name: "Darrel",
+    name: "Darrel Williams",
     type: "scatter",
     marker: {
-      color: 'grey',
+      color: 'blue',
       size: 12,
       opacity: 0.7
     }
@@ -111,6 +111,8 @@ function init(){
   // Apply the stack barmode to the layout
   var layout = {
     title: "Chiefs Pass vs Rush Yards Per Week",
+    xaxis: { title: "Week Played" },
+    yaxis: { title: "Total Yards" },
     barmode: "stack"
   };
 

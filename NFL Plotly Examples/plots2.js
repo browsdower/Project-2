@@ -32,9 +32,11 @@ var data = [trace1, trace2];
 // Create layout object
 var layout = {
   title: "Chiefs Yards Per Week by Win/Loss",
+  xaxis: { title: "Week Played (Red = Loss)" },
+  yaxis: { title: "Total Yards Gained" }
 };
 
 // Render the plot to the div tag with id "plot"
-Plotly.newPlot("plot", data, layout);
+Plotly.newPlot("plot2", data, layout);
 
 });
